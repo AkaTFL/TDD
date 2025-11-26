@@ -1,3 +1,4 @@
+<!-- Code effectué par Hugp Martins -->
 <?php
     use PHPUnit\Framework\TestCase;
 
@@ -97,5 +98,3 @@
         }
     }
 ?>
-
- <!-- */Code effectué par AkaTFL -->

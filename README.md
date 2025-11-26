@@ -1,3 +1,10 @@
+Team Menber:
+
+Hugo Martins
+Charles GROSSIN
+Baptiste Bonnichon-Jaques
+
+
 # Test Unitaire TDD 
 
 ## Projet MyWeeklyAllowance
@@ -22,3 +29,5 @@ Chaque adolescent a un compte d’argent de poche, et chaque parent peut :
 - Phase 2 – Implémentation du code (BLUE)
 - Phase 3 – Refactoring (GREEN)
 - Phase 4 – Vérification de la couverture
+
+Commande pour lancer les tests: 
