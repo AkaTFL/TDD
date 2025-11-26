@@ -1,0 +1,21 @@
+# Vendor directory (Composer dependencies)
+/vendor/
+
+.phpunit.result.cache
+/coverage/
+/.phpunit.cache/
+
+*.log
+/logs/
+
+.env
+
+/cache/
+/tmp/
+
+
+/node_modules/
+package-lock.json
+yarn.lock
+
+# Code effectué par AkaTFL
