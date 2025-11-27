@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build: .
-    container_name: myweeklyallowance-web
+    container_name: walli-web
     ports:
       - "8080:80"
     volumes:
@@ -12,9 +12,9 @@ services:
     environment:
       - PHP_ENV=development
     networks:
-      - myweeklyallowance-network
+      - walli-network
 
 networks:
-  myweeklyallowance-network:
+  walli-network:
     driver: bridge
 

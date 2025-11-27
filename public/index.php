@@ -50,13 +50,13 @@ if ($action === 'manage') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyWeeklyAllowance - Gestion d'argent de poche</title>
+    <title>WallI - Gestion d'argent de poche</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <h1>💰 MyWeeklyAllowance</h1>
+            <h1>💰 WallI</h1>
             <ul class="nav-menu">
                 <?php if (isset($_SESSION['logged_in_parent'])): ?>
                     <li><a href="?action=dashboard">Tableau de bord</a></li>
@@ -116,6 +116,21 @@ if ($action === 'manage') {
             <p>&copy; 2025 Freeky-Team</p>
         </div>
     </footer>
+
+    <script>
+        // Faire disparaître automatiquement les alertes après 5 secondes
+        document.addEventListener('DOMContentLoaded', function() {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(function(alert) {
+                setTimeout(function() {
+                    alert.classList.add('fade-out');
+                    setTimeout(function() {
+                        alert.remove();
+                    }, 500); // Attendre la fin de l'animation avant de supprimer
+                }, 5000); // Disparaître après 5 secondes
+            });
+        });
+    </script>
 </body>
 </html>
 

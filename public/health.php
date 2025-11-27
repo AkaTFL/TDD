@@ -8,7 +8,7 @@ header('Content-Type: application/json');
 $health = [
     'status' => 'healthy',
     'timestamp' => date('Y-m-d H:i:s'),
-    'service' => 'MyWeeklyAllowance',
+    'service' => 'WallI',
     'version' => '1.0.0'
 ];
 
