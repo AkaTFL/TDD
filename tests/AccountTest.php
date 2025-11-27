@@ -1,4 +1,4 @@
-<!-- Code effectué par Hugp Martins -->
+<!-- Code effectué par Baptiste Bonnichon-Jaques -->
 <?php
     use PHPUnit\Framework\TestCase;
 
@@ -12,8 +12,7 @@
         
         protected function setUp(): void
         {
-            $account = new Account();
-            $this->parents = new Parents($account);
+            $this->parents = new Parents();
         }
         
         public function testImplementsCountable()

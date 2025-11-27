@@ -3,6 +3,8 @@
         "phpunit/phpunit": "^12.0"
     },
     "scripts": {
-        "test": "phpunit tests/"
+        "test": "phpunit tests/",
+        "test:coverage": "phpunit --coverage-html coverage/html --coverage-clover coverage/clover.xml",
+        "test:coverage:text": "phpunit --coverage-text"
     }
 }

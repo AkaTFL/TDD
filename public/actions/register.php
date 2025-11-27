@@ -20,8 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
     // Créer un compte pour le parent
-    $account = new Account();
-    $parents = new Parents($account);
+    $parents = new Parents();
     
     // Stocker dans la session
     $_SESSION['parents'][$parentId] = [

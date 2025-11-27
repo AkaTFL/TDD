@@ -12,8 +12,7 @@
         
         protected function setUp(): void
         {
-            $account = new Account();
-            $this->parents = new Parents($account);
+            $this->parents = new Parents();
         }
         
         public function testImplementsCountable()
