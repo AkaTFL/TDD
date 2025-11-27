@@ -18,4 +18,7 @@
 package-lock.json
 yarn.lock
 
+# Docker
+/data/
+
 # Code effectué par AkaTFL

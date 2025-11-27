@@ -4,14 +4,16 @@
 
     require_once 'src/Account.php';
     require_once 'src/Teenager.php';
+    require_once 'src/Parents.php';
 
     class AccountTest extends TestCase
     {
-
+        private Parents $parents;
         
         protected function setUp(): void
         {
-            $this->parents = new Parents();
+            $account = new Account();
+            $this->parents = new Parents($account);
         }
         
         public function testImplementsCountable()
@@ -21,7 +23,7 @@
 
         public function testAddTeenager()
         {
-            $account = new AccountTest();
+            $account = new Account();
             $teenager = $this->parents->addTeenager('John', $account);
             
             $this->assertInstanceOf(Teenager::class, $teenager);
@@ -31,7 +33,7 @@
         public function testRemoveTeenager()
         {
             // Arrange
-            $account = new AccountTest();
+            $account = new Account();
             $this->parents->addTeenager('John', $account);
             
             // Act
@@ -45,7 +47,7 @@
         public function testEditWeeklyAllowance()
         {
             // Arrange
-            $account = new AccountTest();
+            $account = new Account();
             $teenager = $this->parents->addTeenager('John', $account);
             
             // Act
@@ -58,7 +60,7 @@
         public function testDepositMoney()
         {
             // Arrange
-            $account = new AccountTest();
+            $account = new Account();
             $teenager = $this->parents->addTeenager('John', $account);
             
             // Act
@@ -71,7 +73,7 @@
         public function testWithdrawMoney()
         {
             // Arrange
-            $account = new AccountTest();
+            $account = new Account();
             $teenager = $this->parents->addTeenager('John', $account);
             $this->parents->depositMoney($teenager, 50);
             
@@ -85,7 +87,7 @@
         public function testGetExpensesReport()
         {
             // Arrange
-            $account = new AccountTest();
+            $account = new Account();
             $teenager = $this->parents->addTeenager('John', $account);
             
             // Act

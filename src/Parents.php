@@ -1,5 +1,5 @@
 <?php
-    class Parents
+    class Parents implements Countable
     {
         
         private Account $account;
@@ -63,6 +63,3 @@
             return count($this->teenagers);
         }
     }
-?>
-
- <!-- */Code effectué par AkaTFL -->
