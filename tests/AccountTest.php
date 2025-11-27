@@ -5,7 +5,7 @@
     require_once 'src/Account.php';
     require_once 'src/Teenager.php';
 
-    class Account extends TestCase
+    class AccountTest extends TestCase
     {
 
         
@@ -21,7 +21,7 @@
 
         public function testAddTeenager()
         {
-            $account = new Account();
+            $account = new AccountTest();
             $teenager = $this->parents->addTeenager('John', $account);
             
             $this->assertInstanceOf(Teenager::class, $teenager);
@@ -31,7 +31,7 @@
         public function testRemoveTeenager()
         {
             // Arrange
-            $account = new Account();
+            $account = new AccountTest();
             $this->parents->addTeenager('John', $account);
             
             // Act
@@ -45,7 +45,7 @@
         public function testEditWeeklyAllowance()
         {
             // Arrange
-            $account = new Account();
+            $account = new AccountTest();
             $teenager = $this->parents->addTeenager('John', $account);
             
             // Act
@@ -58,7 +58,7 @@
         public function testDepositMoney()
         {
             // Arrange
-            $account = new Account();
+            $account = new AccountTest();
             $teenager = $this->parents->addTeenager('John', $account);
             
             // Act
@@ -71,7 +71,7 @@
         public function testWithdrawMoney()
         {
             // Arrange
-            $account = new Account();
+            $account = new AccountTest();
             $teenager = $this->parents->addTeenager('John', $account);
             $this->parents->depositMoney($teenager, 50);
             
@@ -85,7 +85,7 @@
         public function testGetExpensesReport()
         {
             // Arrange
-            $account = new Account();
+            $account = new AccountTest();
             $teenager = $this->parents->addTeenager('John', $account);
             
             // Act
